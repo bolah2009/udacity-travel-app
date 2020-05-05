@@ -1,0 +1,86 @@
+{
+  "name": "travel-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node src/server/index.js",
+    "build": "webpack --config webpack.dev.js --watch",
+    "build-prod": "webpack --config webpack.prod.js",
+    "build-dev": "webpack-dev-server  --config webpack.dev.js --open",
+    "format": "npx prettier  --write '**/*.{css,html,js,json,md.json,yaml,yml}'",
+    "format:check": "npx prettier  --check '**/*.{css,html,js,json,md.json,yaml,yml}'",
+    "lint": "npx eslint '**/*.js' --fix && npx stylelint '**/*.css' --fix",
+    "lint:check": "npx eslint '**/*.js' && npx stylelint '**/*.css'",
+    "html-validator": "npx html-validator-cli --verbose --file  src/client/views/index.html"
+  },
+  "description": "An asynchronous web app with a node server that uses Web API and user data to dynamically update the UI, showing weather forecast and pocture of locations in a Travel application.",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0",
+    "uuid": "^8.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.5",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsdoc": "^23.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "file-loader": "^6.0.0",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^25.4.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "prettier": "1.19.1",
+    "style-loader": "^1.0.0",
+    "stylelint": "^12.0.0",
+    "stylelint-config-prettier": "^6.0.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-prettier": "^1.1.1",
+    "webpack": "^4.35.3",
+    "webpack-bundle-analyzer": "^3.6.0",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.7.2",
+    "webpack-fix-style-only-entries": "^0.4.0",
+    "workbox-webpack-plugin": "^4.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bolah2009/udacity-travel-app.git"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "Webpack",
+    "Node",
+    "Express"
+  ],
+  "author": "Bola",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bolah2009/udacity-travel-app/issues"
+  },
+  "homepage": "https://github.com/bolah2009/udacity-travel-app#readme",
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
+    },
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
+    "verbose": true
+  }
+}
