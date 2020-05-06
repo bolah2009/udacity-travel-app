@@ -1,0 +1,29 @@
+.d-flex {
+  display: flex;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.jc-sa {
+  justify-content: space-around;
+}
+
+.jc-c {
+  justify-content: center;
+}
+
+.ai-c {
+  align-items: center;
+}
+
+.d-none {
+  display: none;
+}
+
+@media (min-width: 780px) {
+  .row-md {
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel App</title>
+  </head>
+  <body>
+    <main id="app" class="d-flex col jc-c ai-c">
+      <h1 class="headline">
+        Travel App
+      </h1>
+      <div class="new-trip-wrapper">
+        <button id="toggle-form-button" class="button" type="button">add new trip</button>
+
+        <form id="form" class="form d-none d-flex col jc-c ai-c" action="#">
+          <div class="d-flex col ai-c loc">
+            <label class="label" for="loc">Enter Trip location</label>
+            <input
+              class="input"
+              id="loc"
+              name="loc"
+              type="text"
+              required
+              placeholder="City (e.g. London) or Country (e.g. Nigeria)"
+            />
+          </div>
+          <div class="d-flex col ai-c depart">
+            <label class="label" for="depart">Enter Trip departure date</label>
+            <input
+              class="input"
+              type="date"
+              id="depart"
+              name="depart"
+              value="2020-07-22"
+              min="2020-05-05"
+              max="2021-12-31"
+            />
+          </div>
+          <button class="form-submit" type="submit" id="form-submit" name="submit">
+            submit
+          </button>
+        </form>
+      </div>
+      <section class="trips d-flex col">
+        <h2 class="trips-header">My Trips:</h2>
+        <ul class="trips-list" id="trips-list"></ul>
+      </section>
+    </main>
+    <footer class="footer">
+      <ul class="footer-list d-flex col row-md jc-sa ai-c">
+        <li class="footer-list-item jc-c d-flex">
+          <ul class="social d-flex ai-c jc-sa">
+            <li>
+              <a
+                href="https://www.linkedin.com/in/bolah2009/"
+                target="_blank"
+                title="LinkedIn"
+                rel="noopener noreferrer"
+                class="icon-font linkedin"
+              ></a>
+            </li>
+
+            <li>
+              <a
+                href="https://github.com/bolah2009"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="GitHub"
+                class="icon-font github"
+              ></a>
+            </li>
+
+            <li>
+              <a
+                href="http://gitlab.com/bolah2009/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="GitLab"
+                class="icon-font gitlab d-flex col jc-c"
+              >
+                <svg class="gitlab" width="26px" height="23px" viewBox="0 0 210 194">
+                  <g fill="none" fill-rule="evenodd">
+                    <path class="path_1" d="M105 194l39-119H66l39 119z" />
+                    <path class="path_2" d="M105 194L66 75H12l93 119z" />
+                    <path class="path_3" d="M12 75L1 111c-2 3 0 7 2 9l102 74L12 75z" />
+                    <path class="path_1" d="M12 75h54L43 3c-1-4-6-4-7 0L12 75z" />
+                    <path class="path_2" d="M105 194l39-119h54l-93 119z" />
+                    <path class="path_3" d="M198 75l12 36c1 3-1 7-3 9l-102 74 93-119z" />
+                    <path class="path_1" d="M198 75h-54l23-72c1-4 6-4 8 0l23 72z" />
+                  </g>
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://twitter.com/bolah2009"
+                target="_blank"
+                title="Twitter"
+                rel="noopener noreferrer"
+                class="icon-font twitter"
+              ></a>
+            </li>
+          </ul>
+        </li>
+        <li class="footer-list-item jc-c ai-c d-flex col">
+          <p>
+            Built with HTML-CSS-JS
+          </p>
+          <p>
+            Source code open sourced at
+            <a
+              href="https://github.com/bolah2009/udacity-travel-app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub</a
+            >
+          </p>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

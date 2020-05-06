@@ -1,0 +1,127 @@
+@font-face {
+  font-family: 'Genericons';
+  src: url('../font/Genericons.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+.icon-font {
+  font-size: 26px;
+  vertical-align: top;
+  text-align: center;
+  font-family: 'Genericons', sans-serif;
+  cursor: pointer;
+  color: #999;
+  text-decoration: none;
+}
+
+.icon-font:hover {
+  text-decoration: none;
+}
+
+.twitter {
+  font-size: 25px;
+}
+
+.twitter::before {
+  content: '\f202';
+}
+
+.twitter:hover {
+  color: #1da1f2;
+}
+
+.github {
+  font-size: 20px;
+}
+
+.github::before {
+  content: '\f200';
+}
+
+.github:hover {
+  color: #555;
+}
+
+.links .github {
+  font-size: initial;
+  padding-left: 8px;
+}
+
+.linkedin {
+  font-size: 25px;
+}
+
+.linkedin::before {
+  content: '\f207';
+}
+
+.linkedin:hover {
+  color: #0077b5;
+}
+
+.gitlab .path_1 {
+  fill: #bcbcbc;
+}
+
+.gitlab .path_2,
+.gitlab .path_3 {
+  fill: #a2a2a2;
+}
+
+.edx .path_1,
+.edx .path_2 {
+  fill: #898989;
+}
+
+.edx .path_3,
+.edx .path_4 {
+  fill: #a3a3a3;
+}
+
+.edx .path_5 {
+  fill: #9f9f9f;
+}
+
+.gitlab:hover .path_1 {
+  fill: #e24329;
+}
+
+.gitlab:hover .path_2 {
+  fill: #fc6d26;
+}
+
+.gitlab:hover .path_3 {
+  fill: #fca326;
+}
+
+.edx:hover .path_1 {
+  fill: #49a0dd;
+}
+
+.edx:hover .path_2 {
+  fill: #2c67aa;
+}
+
+.edx:hover .path_3 {
+  fill: #731b2b;
+}
+
+.edx:hover .path_4 {
+  fill: #868484;
+}
+
+.edx:hover .path_5 {
+  fill: #cf1f65;
+}
+
+.acclaim {
+  width: 30px;
+  transform: rotate(180deg);
+}
+
+.acclaim:hover {
+  width: 30px;
+  transform: rotate(0deg);
+}

@@ -1,0 +1,71 @@
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background: #000;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  src: url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700');
+  font-display: swap;
+}
+
+* {
+  font-family: 'Oswald', Helvetica, Arial, Sans-Serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  background: none;
+  border: none;
+  font-weight: 400;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  color: #212121;
+}
+
+a {
+  color: #212121;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  color: #070707;
+  text-align: center;
+  font-size: 200%;
+  font-weight: 400;
+}
+
+h2 {
+  text-transform: capitalize;
+  font-size: 150%;
+  margin-bottom: 12px;
+}
+
+p {
+  line-height: 32px;
+}
+
+li {
+  list-style-type: none;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  width: 100%;
+}
