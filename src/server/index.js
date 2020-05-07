@@ -2,9 +2,11 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const compression = require('compression');
+const dotenv = require('dotenv');
 const { geonames, weatherbit, pixabay } = require('./api');
 const cleanData = require('./cleanData');
 
+dotenv.config();
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -13,15 +15,9 @@ app.use(cors());
 app.use(compression());
 app.use(express.static('dist'));
 
-const port = 5000;
+const port = process.env.PORT;
 
-const listening = port => {
-  console.log('Server running ...');
-  console.log(`Local Network http://localhost:${port}`);
-  console.log(`Your Network http://192.168.43.134:${port}`);
-};
-
-app.listen(port, listening(port));
+app.listen(port);
 
 let currentData = {};
 
@@ -42,8 +38,7 @@ const generateData = async (req, res) => {
 
     currentData = { ...currentData, location, date, ...locationImageURL, ...cleanedData };
   } catch (error) {
-    console.log(error);
-    throw error;
+    throw Error(error.message);
   }
 
   res.send(currentData);
