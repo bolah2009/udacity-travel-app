@@ -30,7 +30,7 @@ const tripCardFragment = data => {
          </h3>
          <h4 class="trip-header">Departing: ${formattedDate}</h4>
          <p id="countdown"><span class="trip-location">${location} </span>
-         is ${getCountdownDays(date)} days away</p>
+         is ${getCountdownDays(date)}</p>
          <p>Typical weather for ${weatherDate === date ? 'then' : weatherDate} is:</p>
          <div class="d-flex row jc-sb ai-c">
          <div class="weather-details">
