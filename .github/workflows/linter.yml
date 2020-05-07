@@ -17,7 +17,7 @@ jobs:
       - name: Set up Node 12.x
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
+          node-version: 12.16.2
       - name: Install required dependency for node
         run: |
           yarn install
@@ -36,10 +36,28 @@ jobs:
       - name: Set up Node 12.x
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
+          node-version: 12.16.2
       - name: Install required dependency for node
         run: |
           yarn install
       - name: Run StyleLint
         run: |
           yarn lint:check
+  html:
+    name: HTML Validator
+    runs-on: ubuntu-latest
+    if: always()
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+      - name: Set up Node 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.16.2
+      - name: Install required dependency for node
+        run: |
+          yarn install
+      - name: Run HTML Validator
+        run: |
+          yarn html-validator
