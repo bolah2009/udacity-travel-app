@@ -4,10 +4,10 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "node src/server/index.js",
-    "build": "webpack --config webpack.dev.js --watch",
-    "build-prod": "webpack --config webpack.prod.js",
-    "build-dev": "webpack-dev-server  --config webpack.dev.js --open",
+    "start": "webpack --config webpack.prod.js && node src/server/index.js",
+    "build": "webpack --config webpack.prod.js",
+    "start:dev": "node src/server/index.js",
+    "build:dev": "webpack --config webpack.dev.js --watch",
     "format": "npx prettier  --write '**/*.{css,html,js,json,md.json,yaml,yml}'",
     "format:check": "npx prettier  --check '**/*.{css,html,js,json,md.json,yaml,yml}'",
     "lint": "npx eslint '**/*.js' --fix && npx stylelint '**/*.css' --fix",
@@ -53,7 +53,6 @@
     "webpack": "^4.35.3",
     "webpack-bundle-analyzer": "^3.6.0",
     "webpack-cli": "^3.3.5",
-    "webpack-dev-server": "^3.7.2",
     "webpack-fix-style-only-entries": "^0.4.0",
     "workbox-webpack-plugin": "^4.3.1"
   },
@@ -82,5 +81,8 @@
     "coverageDirectory": "./coverage/",
     "collectCoverage": true,
     "verbose": true
+  },
+  "engines": {
+    "node": "12.16.2"
   }
 }
